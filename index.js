@@ -33,7 +33,7 @@ const run = async () => {
        } else if (event === 'issues') {
          message = issue_message;
 
-         const labels = ["Proposal", "DCP 21"];
+         const labels = ["DCP 21"];
 
          // Adding the labels present in the array.
          octokit.issues.addLabels({
