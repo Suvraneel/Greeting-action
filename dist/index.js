@@ -40,7 +40,7 @@ const run = async () => {
        } else if (event === 'issues') {
          message = issue_message;
 
-         const labels = ["DCP21"];
+         const labels = ["GWOC"];
 
          // Adding the labels present in the array.
          octokit.issues.addLabels({
