@@ -9,11 +9,7 @@ inputs:
   issue_message:
     description: 'Put your customized issue message'
     required: true
-
-  PR_message:
-    description: 'Put your customized PR message'
-    required: true
-
+    
 runs:
   using: 'node12'
   main: 'dist/index.js'
