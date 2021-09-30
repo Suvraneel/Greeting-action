@@ -5,7 +5,6 @@ const run = async () => {
   try {
     const github_token = core.getInput("GITHUB_TOKEN");
     const issue_message = core.getInput("issue_message");
-    const PR_message = core.getInput("PR_message");
     const context = github.context;
 
     const event = github.context.eventName;
@@ -13,7 +12,7 @@ const run = async () => {
 
     const octokit = new github.getOctokit(github_token);
 
-    if (!issue_message || !PR_message) {
+    if (!issue_message) {
       core.warning('"message" input not found.');
       return;
     }
@@ -28,9 +27,7 @@ const run = async () => {
     });
 
     // Checking for the type of event.
-    if (event === "pull_request") {
-      message = PR_message;
-    } else if (event === "issues") {
+    if (event === "issues") {
       message = issue_message;
 
       const labels = ["GWOC21"];
