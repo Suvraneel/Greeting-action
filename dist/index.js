@@ -39,7 +39,7 @@ module.exports = /******/ (() => {
           if (event === "issues") {
             message = issue_message;
 
-            const labels = ["GWOC21"];
+            const labels = ["GSSoC22"];
 
             // Adding the labels present in the array.
             octokit.issues.addLabels({
