@@ -30,7 +30,7 @@ const run = async () => {
     if (event === "issues") {
       message = issue_message;
 
-      const labels = []; // Add init label strings here: eg, "GSSoC22"
+      const labels = []; // Add init label strings here: eg, "GSSoC22" or "GWoC21" in the array
 
       // Adding the labels present in the array.
       octokit.issues.addLabels({
